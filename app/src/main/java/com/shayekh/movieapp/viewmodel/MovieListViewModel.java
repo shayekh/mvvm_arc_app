@@ -1,7 +1,6 @@
 package com.shayekh.movieapp.viewmodel;
 
 import android.app.Application;
-import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -22,8 +21,7 @@ public class MovieListViewModel extends AndroidViewModel {
         mRepo = MovieRepository.getInstance(application);
     }
 
-    public LiveData<List<Result>> getTopLists()
-    {
+    public LiveData<List<Result>> getTopLists() {
         return mRepo.getTopMovieLists();
     }
 }
